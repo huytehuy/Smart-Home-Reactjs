@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import Iconify from '../components/iconify';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 
@@ -31,7 +32,7 @@ export default function DashboardAppPage() {
   const navigate = useNavigate();
   if(sessionStorage.getItem('username')==='')
   navigate('/login', { replace: true });
-  window.location.reload()
+  useEffect(() => {window.location.reload()},[])
 
 
   return (
