@@ -91,6 +91,7 @@ const faceSignIn = async () => {
     console.log('PayLoad: ', userData.payload)
     setName(decodeURIComponent(escape(window.atob(userData.payload.username))))
     setMssv(userData.payload.userId)
+    sessionStorage.setItem('username',name)
     navigate('/login', { replace: true });
     // document.querySelector('.name').innerHTML += `<p>Mã số sinh viên: ${userData.payload.userId}`
     // document.querySelector('.name').innerHTML += `<p>Tên đầy đủ: ${decodeURIComponent(escape(window.atob(userData.payload.username)))}`
