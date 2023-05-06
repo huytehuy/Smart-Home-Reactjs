@@ -181,11 +181,10 @@ const handleError = (errCode) => {
         <p>{name?`Tên người dùng: ${name}`:''}</p>
         <p>{mssv?`Mã số sinh viên: ${mssv}`:''}</p>
       </div>
-      <h1>Face Authentication using ReactJS & FaceIO</h1>
       {/* <button className="action face-registration">Face Registration</button> */}
       <MyComponent faceregister={faceRegistration}  />
       <button className="action face-sign-in" onClick={faceSignIn}>Face Sign In</button>
-      <button className="action face-sign-in" onClick={()=>{sessionStorage.clear();setName('');setMssv('');window.location.reload();}}>Clear Session</button>
+      {/* <button className="action face-sign-in" onClick={()=>{sessionStorage.clear();setName('');setMssv('');window.location.reload();}}>Clear Session</button> */}
   
       {/* <div className="trungquandev-author">
         <div className="flex aic gap-10 mb-7 author">
