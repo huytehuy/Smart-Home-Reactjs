@@ -30,9 +30,9 @@ import {
 export default function DashboardAppPage() {
   const theme = useTheme();
   const navigate = useNavigate();
-  if(sessionStorage.getItem('username')==='')
+  if(sessionStorage.getItem('username')===''){
   navigate('/login', { replace: true });
-  useEffect(() => {window.location.reload()},[])
+  }
 
 
   return (
