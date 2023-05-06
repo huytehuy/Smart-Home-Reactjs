@@ -7,6 +7,8 @@ import { Grid, Container, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import Iconify from '../components/iconify';
+import { useNavigate } from 'react-router-dom';
+
 
 
 // sections
@@ -26,8 +28,10 @@ import {
 
 export default function DashboardAppPage() {
   const theme = useTheme();
-  // if(sessionStorage.getItem('username')==='')
-  // navigate('/login', { replace: true });
+  const navigate = useNavigate();
+  if(sessionStorage.getItem('username')==='')
+  navigate('/login', { replace: true });
+  window.location.reload()
 
 
   return (
