@@ -57,8 +57,8 @@ export default function LoginPage() {
   // useEffect(() => {
   //   sessionStorage.setItem('username',name);
   // }, [name]);
-  if(sessionStorage.getItem('username')!='')
-  navigate('/dashboard', { replace: true });
+  // if(sessionStorage.getItem('username')!='')
+  // navigate('/dashboard', { replace: true });
   const handleClick = () => {
     navigate('/faceid', { replace: true });
   };
